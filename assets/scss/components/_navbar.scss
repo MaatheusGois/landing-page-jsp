@@ -8,10 +8,40 @@
   .navbar__inside {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     .navbar__logo {
+      display: flex;
+      align-items: center;
+      margin-left: -17px;
+
+      @media only screen and (min-width: 350px) {
+        margin-left: -22px;
+      }
+
+      img {
+        width: 40px;
+
+        @media only screen and (min-width: 350px) {
+          width: 55px;
+        }
+      }
+
+      @include for-desktop-up {
+        flex-direction: column;
+        margin-left: 100px;
+
+        img {
+          width: 90px;
+        }
+      }
+
+      @media only screen and (min-width: 1400px) {
+        margin-left: 7px;
+      }
+
       strong {
+        padding-left: 11px;
         font-family: Roboto;
         font-style: normal;
         font-weight: bold;
@@ -54,7 +84,7 @@
 
       .line:before,
       .line:after {
-        content: '';
+        content: "";
         position: relative;
         height: 2px;
         width: 36px;

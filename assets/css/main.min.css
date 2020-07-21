@@ -104,21 +104,43 @@ body {
   .navbar .navbar__inside {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; }
-    .navbar .navbar__inside .navbar__logo strong {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 21px;
-      color: #263b61; }
-      .navbar .navbar__inside .navbar__logo strong small {
-        font-size: 10px;
-        display: block;
-        line-height: 16px; }
-        @media (min-width: 75rem) {
-          .navbar .navbar__inside .navbar__logo strong small {
-            font-size: 12px; } }
+    align-items: center; }
+    .navbar .navbar__inside .navbar__logo {
+      display: flex;
+      align-items: center;
+      margin-left: -17px; }
+      @media only screen and (min-width: 350px) {
+        .navbar .navbar__inside .navbar__logo {
+          margin-left: -22px; } }
+      .navbar .navbar__inside .navbar__logo img {
+        width: 40px; }
+        @media only screen and (min-width: 350px) {
+          .navbar .navbar__inside .navbar__logo img {
+            width: 55px; } }
+      @media (min-width: 75rem) {
+        .navbar .navbar__inside .navbar__logo {
+          flex-direction: column;
+          margin-left: 100px; }
+          .navbar .navbar__inside .navbar__logo img {
+            width: 90px; } }
+      @media only screen and (min-width: 1400px) {
+        .navbar .navbar__inside .navbar__logo {
+          margin-left: 7px; } }
+      .navbar .navbar__inside .navbar__logo strong {
+        padding-left: 11px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #263b61; }
+        .navbar .navbar__inside .navbar__logo strong small {
+          font-size: 10px;
+          display: block;
+          line-height: 16px; }
+          @media (min-width: 75rem) {
+            .navbar .navbar__inside .navbar__logo strong small {
+              font-size: 12px; } }
     .navbar .navbar__inside .navbar__hamburguer.active .line:before {
       bottom: 0;
       transform: rotate(45deg); }
@@ -137,7 +159,7 @@ body {
       align-items: center; }
       .navbar .navbar__inside .navbar__hamburguer .line:before,
       .navbar .navbar__inside .navbar__hamburguer .line:after {
-        content: '';
+        content: "";
         position: relative;
         height: 2px;
         width: 36px;
